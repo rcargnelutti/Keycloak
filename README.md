@@ -12,10 +12,10 @@ Este Dockerfile constrói uma imagem Keycloak baseada na imagem “quay.io/keycl
 Clonar o repositório  
 git clone https://github.com/rcargnelutti/Keycloak.git
 
-Compilar imagem
+Compilar imagem (Dockerfile)  
 docker compose build --no-cache keycloak  
 
-Executar as imagens  
+Executar as imagens (docker-compose.yml)  
 docker compose up -d
 
 Listar os containers em execução    
