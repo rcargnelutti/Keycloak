@@ -10,22 +10,22 @@ Este Dockerfile constrói uma imagem Keycloak baseada na imagem “quay.io/keycl
 ## Keycloak e Postgre com Docker compose
 
 1. Clonar o repositório  
-git clone https://github.com/rcargnelutti/Keycloak.git
+```git clone https://github.com/rcargnelutti/Keycloak.git```
 
 2. Compilar imagem (Dockerfile)  
-docker compose build --no-cache keycloak  
+```docker compose build --no-cache keycloak```  
 
 3. Executar as imagens (docker-compose.yml)  
-docker compose up -d
+```docker compose up -d```
 
 4. Listar os containers em execução    
-docker compose ps
+```docker compose ps```
 
 5. Checar os logs do container keycloak  
-docker compose logs -f keycloak
+```docker compose logs -f keycloak```
 
 6. Acessar endeeço no navegador web  
-http://localhost:8180/
+```http://localhost:8180/```
 
 Esta solução garante um ambiente Keycloak atualizado e fornece instruções claras para integração do Keycloak com Postgres ou outros bancos de dados.
 
