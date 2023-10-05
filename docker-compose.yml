@@ -16,8 +16,8 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: keycloak
       POSTGRES_HOST: postgres
-    networks:
-      - local
+    #networks:
+    #  - local
     ports:
       - "5432:5432"
 
@@ -51,20 +51,20 @@ services:
       KC_METRICS_ENABLED: 'true'
       # KC_HOSTNAME: keycloak.com.au
       # KC_HOSTNAME_PORT: 8180
-      KC_HOSTNAME_URL: http://localhost:8180
+      KC_HOSTNAME_URL: http://200.18.32.172:8180
       KC_PROXY: reencrypt
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
     ports:
       - "8180:8080"
       - "8787:8787" # debug port
-    networks:
-      - local
+    #networks:
+    #  - local
 
-networks:
-  local:
-    name: local
-    driver: bridge
+#networks:
+  #local:
+    #name: local
+    #driver: bridge
 
 volumes:
   postgres_data:
