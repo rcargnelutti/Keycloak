@@ -27,12 +27,14 @@ Este Dockerfile constrói uma imagem Keycloak baseada na imagem “quay.io/keycl
 6. Acessar endeeço no navegador web  
 ```http://localhost:8180/```
 
-7. Desabilitar SSl
-Acessar o container
-```docker exec -it [id ou nome do container] bash```
-```/opt/keycloak-22.0.3/bin```
-```./kcadm.sh config credentials --server http://localhost:8080 --realm master --user admin```
-```./kcadm.sh update realms/master -s sslRequired=NONE```
+7. Desabilitar SSl  
+Acessar o container  
+```docker exec -it [id ou nome do container] bash```  
+Entrar no diretório  
+```cd /opt/keycloak-22.0.3/bin```  
+Executar comandos  
+```./kcadm.sh config credentials --server http://localhost:8080 --realm master --user admin```  
+```./kcadm.sh update realms/master -s sslRequired=NONE```  
 
 Esta solução garante um ambiente Keycloak atualizado e fornece instruções claras para integração do Keycloak com Postgres ou outros bancos de dados.
 
